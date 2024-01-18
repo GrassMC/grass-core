@@ -1,0 +1,17 @@
+### Gradle
+.gradle
+build
+
+.run-paper
+
+### IntelliJ
+.idea/*
+!.idea/codeStyles
+!.idea/copyright
+!.idea/inspectionProfiles
+!.idea/scopes
+
+*.iml
+!.idea/gradle.xml
+!.idea/icon.svg
+!.idea/ktlint-plugin.xml
