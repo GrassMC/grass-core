@@ -1,0 +1,9 @@
+[versions]
+mccoroutine = "2.14.0"
+
+[libraries]
+mccoroutine-folia-api = { module = "com.github.shynixn.mccoroutine:mccoroutine-folia-api", version.ref = "mccoroutine" }
+mccoroutine-folia-core = { module = "com.github.shynixn.mccoroutine:mccoroutine-folia-core", version.ref = "mccoroutine" }
+
+[bundles]
+mccoroutine-folia = ["mccoroutine-folia-api", "mccoroutine-folia-core"]
