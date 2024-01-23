@@ -1,3 +1,7 @@
+plugins {
+    `maven-publish`
+}
+
 dependencies {
     api(kotlin("reflect"))
     api(platform(libs.kotlinx.coroutines.bom))
