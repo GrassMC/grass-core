@@ -1,4 +1,4 @@
 name: grass-paper
 version: $version
-main: $main
+main: io.github.grassmc.paper.plugin.InternalGrassPaperPlugin
 api-version: "1.20"
