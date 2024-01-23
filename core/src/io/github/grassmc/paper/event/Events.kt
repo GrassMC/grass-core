@@ -4,7 +4,7 @@ package io.github.grassmc.paper.event
 
 import com.github.shynixn.mccoroutine.folia.EventExecutionType
 import com.github.shynixn.mccoroutine.folia.callSuspendingEvent
-import io.github.grassmc.paper.extensions.Paper
+import io.github.grassmc.paper.server.Paper
 import org.bukkit.event.Event
 import org.bukkit.plugin.Plugin
 

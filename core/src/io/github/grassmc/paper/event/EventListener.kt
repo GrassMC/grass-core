@@ -1,6 +1,6 @@
 package io.github.grassmc.paper.event
 
-import io.github.grassmc.paper.extensions.Paper
+import io.github.grassmc.paper.server.Paper
 import org.bukkit.event.Event
 import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener

@@ -2,7 +2,7 @@
 
 package io.github.grassmc.paper.event
 
-import io.github.grassmc.paper.extensions.Paper
+import io.github.grassmc.paper.server.Paper
 import io.github.grassmc.paper.utils.MCCoroutineWrapper
 import io.github.grassmc.paper.utils.newSuspendingEventExecutor
 import io.github.grassmc.paper.utils.newSuspendingRegisteredListener

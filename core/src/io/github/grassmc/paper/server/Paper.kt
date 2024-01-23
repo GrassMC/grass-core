@@ -1,4 +1,4 @@
-package io.github.grassmc.paper.extensions
+package io.github.grassmc.paper.server
 
 import org.bukkit.Bukkit
 import org.bukkit.Server
