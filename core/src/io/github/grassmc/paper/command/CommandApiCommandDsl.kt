@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package io.github.grassmc.paper.command
 
 import dev.jorel.commandapi.CommandAPICommand

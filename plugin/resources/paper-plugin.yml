@@ -1,0 +1,4 @@
+name: grass-paper
+version: $version
+main: $main
+api-version: "1.20"
