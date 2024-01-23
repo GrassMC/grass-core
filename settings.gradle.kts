@@ -9,6 +9,10 @@ plugins {
 rootProject.name = "grass-paper"
 
 fastModule {
-    module(ModuleType.PAPER_LIB, "core")
-    module(ModuleType.PAPER_PLUGIN, "plugin")
+    module(ModuleType.PAPER_LIB, "core") {
+        moduleName = "${rootProject.name}-core"
+    }
+    module(ModuleType.PAPER_PLUGIN, "plugin") {
+        moduleName = "${rootProject.name}-plugin"
+    }
 }
