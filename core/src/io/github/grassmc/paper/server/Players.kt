@@ -8,7 +8,7 @@ import java.util.UUID
 /**
  * Retrieves the online players in the server.
  *
- * @see [org.bukkit.Server.getOnlinePlayers]
+ * @see org.bukkit.Server.getOnlinePlayers
  */
 val onlinePlayers: Collection<Player> get() = Paper.onlinePlayers
 
@@ -18,8 +18,8 @@ val onlinePlayers: Collection<Player> get() = Paper.onlinePlayers
  * This method may not return objects for offline players.
  * If [ignoreCase] is true, the search is case-insensitive.
  *
- * @see [org.bukkit.Server.getPlayer]
- * @see [org.bukkit.Server.getPlayerExact]
+ * @see org.bukkit.Server.getPlayer
+ * @see org.bukkit.Server.getPlayerExact
  */
 fun findPlayer(
     name: String,
@@ -32,7 +32,7 @@ fun findPlayer(
  * This method may not return objects for offline players.
  * For offline players, use [offlinePlayer] instead.
  *
- * @see [org.bukkit.Server.getPlayer]
+ * @see org.bukkit.Server.getPlayer
  */
 fun findPlayer(uniqueId: UUID) = Paper.getPlayer(uniqueId)
 
@@ -60,7 +60,7 @@ fun player(uniqueId: UUID) = requireNotNull(findPlayer(uniqueId)) { "Player with
  * This method may involve a blocking web request to get the UUID for the given name.
  * This will always return a player object, even if the player has never joined the server
  *
- * @see [org.bukkit.Server.getOfflinePlayer]
+ * @see org.bukkit.Server.getOfflinePlayer
  */
 fun offlinePlayer(name: String) = Paper.getOfflinePlayer(name)
 
@@ -69,6 +69,6 @@ fun offlinePlayer(name: String) = Paper.getOfflinePlayer(name)
  *
  * This will always return a player object, even if the player has never joined the server
  *
- * @see [org.bukkit.Server.getOfflinePlayer]
+ * @see org.bukkit.Server.getOfflinePlayer
  */
 fun offlinePlayer(uniqueId: UUID) = Paper.getOfflinePlayer(uniqueId)

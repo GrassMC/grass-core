@@ -28,7 +28,7 @@ abstract class GrassPaperJavaPlugin : SuspendingJavaPlugin(), GrassPaperPlugin {
          * Retrieves the instance of a specified plugin class.
          *
          * @param T The plugin class extending [JavaPlugin].
-         * @see [JavaPlugin.getPlugin]
+         * @see JavaPlugin.getPlugin
          */
         @Suppress("unused")
         inline fun <reified T : JavaPlugin> getPlugin() = getPlugin(T::class.java)

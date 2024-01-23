@@ -18,7 +18,7 @@ import org.bukkit.plugin.Plugin
  * was called. Each job instance represents an await-able job for each method being called in each suspending listener.
  * For awaiting use callSuspendingEvent(...).joinAll().
  *
- * @see [org.bukkit.plugin.PluginManager.callSuspendingEvent]
+ * @see org.bukkit.plugin.PluginManager.callSuspendingEvent
  */
 fun Event.callSuspending(
     plugin: Plugin,

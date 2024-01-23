@@ -12,7 +12,7 @@ interface GrassPaperPlugin : SuspendingPlugin {
     /**
      * The directory that the plugin data's files are located in. The directory may not exist.
      *
-     * @see [org.bukkit.plugin.Plugin.getDataFolder]
+     * @see org.bukkit.plugin.Plugin.getDataFolder
      */
     val dataDirectory: Path
 }
