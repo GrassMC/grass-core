@@ -6,7 +6,7 @@ plugins {
     id("io.github.tozydev.fast-module") version "0.5.1"
 }
 
-rootProject.name = "grass-paper"
+rootProject.name = "typhon"
 
 fastModule {
     module(ModuleType.PAPER_LIB, "core") {

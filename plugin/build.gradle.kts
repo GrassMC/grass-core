@@ -1,4 +1,4 @@
 dependencies {
-    paperLib(project(":grass-paper-core"))
+    paperLib(project(":typhon-core"))
     paperLib(libs.commandapi.bukkit.shade)
 }
