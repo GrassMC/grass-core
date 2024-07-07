@@ -11,9 +11,14 @@ repositories {
 
 dependencies {
     compileOnly(paperApi())
-    api(kotlin("reflect"))
-    api(platform(libs.kotlinx.coroutines.bom))
-    api(libs.kotlinx.coroutines.core)
+
+    api(platform(waddle.kotlin.bom))
+    api(waddle.kotlin.stdlib)
+    api(waddle.kotlin.reflect)
+
+    api(platform(waddle.kotlinx.coroutines.bom))
+    api(waddle.kotlinx.coroutines.core)
+
     api(libs.bundles.mccoroutine.folia)
     api(libs.commandapi.bukkit.core)
     api(libs.commandapi.bukkit.kotlin)

@@ -1,10 +1,8 @@
 [versions]
-mccoroutine = "2.14.0"
-commandapi = "9.3.0"
+mccoroutine = "2.18.0"
+commandapi = "9.5.1"
 
 [libraries]
-kotlinx-coroutines-bom = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-bom", version = "1.8.0-RC2" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core" }
 mccoroutine-folia-api = { module = "com.github.shynixn.mccoroutine:mccoroutine-folia-api", version.ref = "mccoroutine" }
 mccoroutine-folia-core = { module = "com.github.shynixn.mccoroutine:mccoroutine-folia-core", version.ref = "mccoroutine" }
 commandapi-bukkit-core = { module = "dev.jorel:commandapi-bukkit-core", version.ref = "commandapi" }
