@@ -32,7 +32,8 @@ private val getEventListenerFunction by lazy {
 }
 
 @PublishedApi
-internal fun getEventListeners(eventClass: Class<out Event>) = getEventListenerFunction.call(Paper.pluginManager, eventClass) as HandlerList
+internal fun getEventListeners(eventClass: Class<out Event>) =
+    getEventListenerFunction.call(Paper.pluginManager, eventClass) as HandlerList
 
 /**
  * Registers a suspend event listener of type [E].

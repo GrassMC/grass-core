@@ -1,4 +1,0 @@
-before_install:
-  - sdk update
-  - sdk install java 17.0.10-zulu
-  - sdk use java 17.0.10-zulu

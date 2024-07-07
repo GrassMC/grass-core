@@ -1,18 +1,20 @@
-import io.github.tozydev.fastmodule.dsl.fastModule
-import io.github.tozydev.fastmodule.dsl.module
-import io.github.tozydev.fastmodule.modules.ModuleType
+import io.github.grassmc.waddle.settings.subproject
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven("https://maven.pkg.github.com/GrassMC/waddle") {
+            name = "githubPackages"
+            credentials(PasswordCredentials::class)
+        }
+    }
+}
 
 plugins {
-    id("io.github.tozydev.fast-module") version "0.5.1"
+    id("io.github.grassmc.waddle") version "2.2.0"
 }
 
 rootProject.name = "typhon"
 
-fastModule {
-    module(ModuleType.PAPER_LIB, "core") {
-        moduleName = "${rootProject.name}-core"
-    }
-    module(ModuleType.PAPER_PLUGIN, "plugin") {
-        moduleName = "${rootProject.name}-plugin"
-    }
-}
+subproject(file("core"))
+subproject(file("plugin"))

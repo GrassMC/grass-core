@@ -1,8 +1,16 @@
+import io.github.grassmc.waddle.paper.extensions.paperApi
+import io.github.grassmc.waddle.paper.extensions.paperMc
+
 plugins {
-    `maven-publish`
+    alias(waddle.plugins.kotlin)
+}
+
+repositories {
+    paperMc()
 }
 
 dependencies {
+    compileOnly(paperApi())
     api(kotlin("reflect"))
     api(platform(libs.kotlinx.coroutines.bom))
     api(libs.kotlinx.coroutines.core)

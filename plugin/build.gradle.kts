@@ -1,4 +1,10 @@
+plugins {
+    alias(waddle.plugins.kotlin)
+    alias(waddle.plugins.paper)
+    alias(waddle.plugins.shadow)
+}
+
 dependencies {
-    paperLib(project(":typhon-core"))
-    paperLib(libs.commandapi.bukkit.shade)
+    api(project(":typhon-core"))
+    api(libs.commandapi.bukkit.shade)
 }

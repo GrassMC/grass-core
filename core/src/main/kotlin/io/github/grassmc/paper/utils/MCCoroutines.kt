@@ -19,18 +19,20 @@ private val mcCoroutine: MCCoroutine by lazy {
 }
 private val SuspendingEventExecutorConstructor by lazy {
     val clazz =
-        Class.forName(
-            "com.github.shynixn.mccoroutine.folia.service.EventServiceImpl.SuspendingEventExecutor",
-        ).kotlin
+        Class
+            .forName(
+                "com.github.shynixn.mccoroutine.folia.service.EventServiceImpl.SuspendingEventExecutor",
+            ).kotlin
     requireNotNull(clazz.primaryConstructor) {
         "SuspendingEventExecutor class does not have a primary constructor"
     }
 }
 private val SuspendingRegisteredListenerConstructor by lazy {
     val clazz =
-        Class.forName(
-            "com.github.shynixn.mccoroutine.folia.service.EventServiceImpl.SuspendingRegisteredListener",
-        ).kotlin
+        Class
+            .forName(
+                "com.github.shynixn.mccoroutine.folia.service.EventServiceImpl.SuspendingRegisteredListener",
+            ).kotlin
     requireNotNull(clazz.primaryConstructor) {
         "SuspendingRegisteredListener class does not have a primary constructor"
     }

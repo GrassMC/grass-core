@@ -8,7 +8,9 @@ import java.nio.file.Path
  * Represents an abstract class for a _Grass Paper_ Java plugin.
  * This class provides the functionality for a Paper plugin with kotlinx-coroutines support.
  */
-abstract class GrassPaperJavaPlugin : SuspendingJavaPlugin(), GrassPaperPlugin {
+abstract class GrassPaperJavaPlugin :
+    SuspendingJavaPlugin(),
+    GrassPaperPlugin {
     override val dataDirectory: Path = dataFolder.toPath()
 
     override suspend fun onDisableAsync() = Unit
