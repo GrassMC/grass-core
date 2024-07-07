@@ -2,7 +2,7 @@
 .gradle
 build
 
-.run-paper
+.run-server
 
 ### IntelliJ
 .idea/*
