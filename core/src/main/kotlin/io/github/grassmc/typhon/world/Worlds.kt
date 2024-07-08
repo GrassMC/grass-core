@@ -1,7 +1,8 @@
 package io.github.grassmc.typhon.world
 
+import io.github.grassmc.typhon.key.asBukkit
 import io.github.grassmc.typhon.server.PaperServer
-import org.bukkit.NamespacedKey
+import net.kyori.adventure.key.Key
 import org.bukkit.World
 import java.util.UUID
 
@@ -31,7 +32,7 @@ fun worldOrNull(id: UUID) = PaperServer.getWorld(id)
  *
  * @see org.bukkit.Server.getWorld
  */
-fun worldOrNull(key: NamespacedKey) = PaperServer.getWorld(key)
+fun worldOrNull(key: Key) = PaperServer.getWorld(key.asBukkit())
 
 /**
  * Retrieves a world by its [name].
@@ -55,4 +56,4 @@ fun world(id: UUID) = requireNotNull(worldOrNull(id)) { "World with uuid $id not
  * @throws IllegalArgumentException If no world with the specified key is found.
  * @see org.bukkit.Server.getWorld
  */
-fun world(key: NamespacedKey) = requireNotNull(worldOrNull(key)) { "World with key $key not found" }
+fun world(key: Key) = requireNotNull(worldOrNull(key)) { "World with key $key not found" }
