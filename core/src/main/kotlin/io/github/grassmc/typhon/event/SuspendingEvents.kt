@@ -1,9 +1,10 @@
 @file:Suppress("unused")
 
-package io.github.grassmc.paper.event
+package io.github.grassmc.typhon.event
 
 import com.github.shynixn.mccoroutine.folia.EventExecutionType
 import com.github.shynixn.mccoroutine.folia.callSuspendingEvent
+import io.github.grassmc.typhon.plugin.firstJavaPlugin
 import io.github.grassmc.typhon.server.PaperServer
 import org.bukkit.event.Event
 import org.bukkit.plugin.Plugin
@@ -21,6 +22,6 @@ import org.bukkit.plugin.Plugin
  * @see org.bukkit.plugin.PluginManager.callSuspendingEvent
  */
 fun Event.callSuspending(
-    plugin: Plugin,
+    plugin: Plugin = firstJavaPlugin(),
     executionType: EventExecutionType = EventExecutionType.Concurrent,
 ) = PaperServer.pluginManager.callSuspendingEvent(this, plugin, executionType)
