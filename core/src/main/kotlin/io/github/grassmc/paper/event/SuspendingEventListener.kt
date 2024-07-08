@@ -2,10 +2,10 @@
 
 package io.github.grassmc.paper.event
 
-import io.github.grassmc.paper.server.Paper
 import io.github.grassmc.paper.utils.MCCoroutineWrapper
 import io.github.grassmc.paper.utils.newSuspendingEventExecutor
 import io.github.grassmc.paper.utils.newSuspendingRegisteredListener
+import io.github.grassmc.typhon.server.PaperServer
 import org.bukkit.event.Event
 import org.bukkit.event.EventPriority
 import org.bukkit.event.HandlerList
@@ -33,7 +33,7 @@ private val getEventListenerFunction by lazy {
 
 @PublishedApi
 internal fun getEventListeners(eventClass: Class<out Event>) =
-    getEventListenerFunction.call(Paper.pluginManager, eventClass) as HandlerList
+    getEventListenerFunction.call(PaperServer.pluginManager, eventClass) as HandlerList
 
 /**
  * Registers a suspend event listener of type [E].

@@ -1,7 +1,6 @@
-@file:Suppress("unused")
+package io.github.grassmc.typhon.world
 
-package io.github.grassmc.paper.server
-
+import io.github.grassmc.typhon.server.PaperServer
 import org.bukkit.NamespacedKey
 import org.bukkit.World
 import java.util.UUID
@@ -11,28 +10,28 @@ import java.util.UUID
  *
  * @see org.bukkit.Server.getWorlds
  */
-val worlds: List<World> get() = Paper.worlds
+val worlds: List<World> get() = PaperServer.worlds
 
 /**
  * Finds a world by its [name].
  *
  * @see org.bukkit.Server.getWorld
  */
-fun findWorld(name: String) = Paper.getWorld(name)
+fun worldOrNull(name: String) = PaperServer.getWorld(name)
 
 /**
- * Finds a world by its [uuid].
+ * Finds a world by its [id].
  *
  * @see org.bukkit.Server.getWorld
  */
-fun findWorld(uuid: UUID) = Paper.getWorld(uuid)
+fun worldOrNull(id: UUID) = PaperServer.getWorld(id)
 
 /**
  * Finds a world by its [key].
  *
  * @see org.bukkit.Server.getWorld
  */
-fun findWorld(key: NamespacedKey) = Paper.getWorld(key)
+fun worldOrNull(key: NamespacedKey) = PaperServer.getWorld(key)
 
 /**
  * Retrieves a world by its [name].
@@ -40,15 +39,15 @@ fun findWorld(key: NamespacedKey) = Paper.getWorld(key)
  * @throws IllegalArgumentException If no world with the specified name is found.
  * @see org.bukkit.Server.getWorld
  */
-fun world(name: String) = requireNotNull(findWorld(name)) { "World with name $name not found" }
+fun world(name: String) = requireNotNull(worldOrNull(name)) { "World with name $name not found" }
 
 /**
- * Retrieves a world by its [uuid].
+ * Retrieves a world by its [id].
  *
  * @throws IllegalArgumentException If no world with the specified unique id is found.
  * @see org.bukkit.Server.getWorld
  */
-fun world(uuid: UUID) = requireNotNull(findWorld(uuid)) { "World with uuid $uuid not found" }
+fun world(id: UUID) = requireNotNull(worldOrNull(id)) { "World with uuid $id not found" }
 
 /**
  * Retrieves a world by its [key].
@@ -56,4 +55,4 @@ fun world(uuid: UUID) = requireNotNull(findWorld(uuid)) { "World with uuid $uuid
  * @throws IllegalArgumentException If no world with the specified key is found.
  * @see org.bukkit.Server.getWorld
  */
-fun world(key: NamespacedKey) = requireNotNull(findWorld(key)) { "World with key $key not found" }
+fun world(key: NamespacedKey) = requireNotNull(worldOrNull(key)) { "World with key $key not found" }

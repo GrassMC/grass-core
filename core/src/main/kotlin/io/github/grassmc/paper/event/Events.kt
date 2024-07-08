@@ -4,7 +4,7 @@ package io.github.grassmc.paper.event
 
 import com.github.shynixn.mccoroutine.folia.EventExecutionType
 import com.github.shynixn.mccoroutine.folia.callSuspendingEvent
-import io.github.grassmc.paper.server.Paper
+import io.github.grassmc.typhon.server.PaperServer
 import org.bukkit.event.Event
 import org.bukkit.plugin.Plugin
 
@@ -23,4 +23,4 @@ import org.bukkit.plugin.Plugin
 fun Event.callSuspending(
     plugin: Plugin,
     executionType: EventExecutionType = EventExecutionType.Concurrent,
-) = Paper.pluginManager.callSuspendingEvent(this, plugin, executionType)
+) = PaperServer.pluginManager.callSuspendingEvent(this, plugin, executionType)

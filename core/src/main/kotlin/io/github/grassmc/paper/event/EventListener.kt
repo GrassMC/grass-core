@@ -1,6 +1,6 @@
 package io.github.grassmc.paper.event
 
-import io.github.grassmc.paper.server.Paper
+import io.github.grassmc.typhon.server.PaperServer
 import org.bukkit.event.Event
 import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
@@ -24,7 +24,7 @@ inline fun <reified E : Event> EventListener<E>.register(
     plugin: Plugin,
     priority: EventPriority = EventPriority.NORMAL,
     ignoreCancelled: Boolean = false,
-) = Paper.pluginManager.registerEvent(
+) = PaperServer.pluginManager.registerEvent(
     E::class.java,
     this,
     priority,
