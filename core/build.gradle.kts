@@ -20,6 +20,4 @@ dependencies {
     api(waddle.kotlinx.coroutines.core)
 
     api(libs.bundles.mccoroutine.folia)
-    api(libs.commandapi.bukkit.core)
-    api(libs.commandapi.bukkit.kotlin)
 }

@@ -6,7 +6,6 @@ plugins {
 
 dependencies {
     api(project(":typhon-core"))
-    api(libs.commandapi.bukkit.shade)
 }
 
 paper {
