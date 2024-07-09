@@ -11,7 +11,7 @@ pluginManagement {
 }
 
 plugins {
-    id("io.github.grassmc.waddle") version "2.2.0"
+    id("io.github.grassmc.waddle") version "2.3.0"
 }
 
 rootProject.name = "typhon"

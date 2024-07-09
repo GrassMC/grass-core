@@ -1,8 +1,10 @@
+import io.github.grassmc.waddle.githubPackages
 import io.github.grassmc.waddle.paper.extensions.paperApi
 import io.github.grassmc.waddle.paper.extensions.paperMc
 
 plugins {
     alias(waddle.plugins.kotlin)
+    alias(waddle.plugins.publish)
 }
 
 repositories {
@@ -20,4 +22,10 @@ dependencies {
     api(waddle.kotlinx.coroutines.core)
 
     api(libs.bundles.mccoroutine.folia)
+}
+
+publishing {
+    repositories {
+        githubPackages("GrassMC", "typhon")
+    }
 }
