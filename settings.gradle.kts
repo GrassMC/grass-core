@@ -5,13 +5,16 @@ pluginManagement {
         gradlePluginPortal()
         maven("https://maven.pkg.github.com/GrassMC/waddle") {
             name = "githubPackages"
-            credentials(PasswordCredentials::class)
+            credentials {
+                username = providers.gradleProperty("github.user").orNull
+                password = providers.gradleProperty("github.token").orNull
+            }
         }
     }
 }
 
 plugins {
-    id("io.github.grassmc.waddle") version "2.3.0"
+    id("io.github.grassmc.waddle") version "3.0.0"
 }
 
 rootProject.name = "typhon"

@@ -26,6 +26,6 @@ dependencies {
 
 publishing {
     repositories {
-        githubPackages("GrassMC", "typhon")
+        githubPackages(project, "GrassMC", "typhon")
     }
 }
