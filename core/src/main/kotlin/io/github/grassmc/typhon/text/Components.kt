@@ -9,7 +9,8 @@ import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver
  *
  * @see net.kyori.adventure.text.minimessage.MiniMessage.deserialize
  */
-fun String.richText(resolver: TagResolver) = miniMessage.deserialize(this, resolver)
+fun String.richText(resolver: TagResolver? = null) =
+    if (resolver == null) miniMessage.deserialize(this) else miniMessage.deserialize(this, resolver)
 
 /** Returns this Component if it is not null, otherwise returns an empty Component. */
 fun Component?.orEmpty() = this ?: Component.empty()

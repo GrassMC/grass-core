@@ -114,7 +114,7 @@ data class CompositeMessage(
  */
 fun Audience.sendMessage(
     message: Message,
-    resolver: TagResolver,
+    resolver: TagResolver? = null,
 ) {
     when (message) {
         is TextMessage -> sendMessage(message.text.richText(resolver))
@@ -132,10 +132,10 @@ fun Audience.sendMessage(
  */
 fun Message.send(
     audience: Audience,
-    resolver: TagResolver,
+    resolver: TagResolver? = null,
 ) = audience.sendMessage(this, resolver)
 
-private fun TitleMessage.toAdventureTitle(resolver: TagResolver) =
+private fun TitleMessage.toAdventureTitle(resolver: TagResolver?) =
     Title.title(
         title?.richText(resolver).orEmpty(),
         subtitle?.richText(resolver).orEmpty(),
